@@ -2,8 +2,7 @@ function addNew(){
 const product=$('#modal-transaction-product').val();
 const amount=$('#modal-transaction-amount').val();
 const type=$('#modal-transaction-type').val();
-//aici mai sus folosim jquery. Luam elementele din pagina web (DOM). Deci am luat intro variabila valoarea de pe idul
-//modal transaciton product care ii inputul din labelu ala sau ce ii
+
 
 fetch('/api/transactions', {
 method:'POST',
@@ -18,16 +17,14 @@ headers:{
 
 }).then(response=>location.reload());
 }
-//cand punem header, ii zicem ca ii trimitem json
-//location reload ala face refresh automat la pagina
+
 
 
 function editTransaction(transactionIdToEdit){
 const product=$('#modal-transaction-product').val();
 const amount=$('#modal-transaction-amount').val();
 const type=$('#modal-transaction-type').val();
-//aici mai sus folosim jquery. Luam elementele din pagina web (DOM). Deci am luat intro variabila valoarea de pe idul
-//modal transaciton product care ii inputul din labelu ala sau ce ii
+
 
 
 
@@ -92,28 +89,4 @@ addNew();
 
 
 
-//$(document).ready(()=>{ // aici facem ca pagina sa fie incarcata. adica incarcam pagina intai
-//$('.fa-edit').click(function(){
-//
-//
-//let transactionIdToEdit=this.parentElement.id;//parintele
-//
-//const row=this.parentElement.parentElement;//row
-//const product= row.childred[0].innerText;// iau textul de pe product
-//const type= row.childred[1].innerText;// iau textul de pe type
-//const amount= row.childred[2].innerText;// iau textul de pe amount
-//
-//
-//
-////ca sa le incarcam in form
-//$('#modal-transaction-product').val(product);
-//$('#modal-transaction-type').val(type);
-//$('#modal-transaction-amount').val(amount);
-//});
-//
-//});
 
-
-
-//ca sa ia valoarea de pe fiecare rand. Vom seta in HTML un id pe rand. adica fiecare icon dinala tre sa aiba un id. Iconul
-//de pe randul 3 tre sa aiba idul corespunzator
